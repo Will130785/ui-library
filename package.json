@@ -1,0 +1,20 @@
+{
+    "name": "ui-library",
+    "private": true,
+    "workspaces": [
+        "packages/*",
+        "examples/*"
+    ],
+    "scripts": {
+        "build": "npm run build --workspaces",
+        "clean": "npm run clean --workspaces",
+        "typecheck": "npm run typecheck --workspaces",
+        "test": "npm run test --workspaces",
+        "lint": "npm run lint --workspaces"
+    },
+    "devDependencies": {
+        "@types/react": "^19.2.0",
+        "typescript": "^5.0.0",
+        "tsup": "^8.5.0"
+    }
+}

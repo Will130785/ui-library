@@ -1,0 +1,32 @@
+{
+    "name": "@will130785/react",
+    "version": "0.0.2",
+    "description": "React components by Will Contable",
+    "private": false,
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.mts",
+            "import": "./dist/index.js"
+        },
+        "./Button": {
+            "types": "./dist/Button/index.d.mts",
+            "import": "./dist/Button/index.js"
+        }
+    },
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "clean": "rm -rf dist",
+        "typecheck": "tsc --noEmit",
+        "test": "echo \"No tests yet\""
+    },
+    "peerDependencies": {
+        "react": ">=18"
+    }
+}
