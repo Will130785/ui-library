@@ -1,6 +1,6 @@
 {
     "name": "@will130785/react",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "React components by Will Contable",
     "private": false,
     "license": "MIT",
@@ -13,10 +13,6 @@
         ".": {
             "types": "./dist/index.d.mts",
             "import": "./dist/index.js"
-        },
-        "./Button": {
-            "types": "./dist/Button/index.d.mts",
-            "import": "./dist/Button/index.js"
         }
     },
     "scripts": {

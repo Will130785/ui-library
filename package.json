@@ -10,7 +10,9 @@
         "clean": "npm run clean --workspaces",
         "typecheck": "npm run typecheck --workspaces",
         "test": "npm run test --workspaces",
-        "lint": "npm run lint --workspaces"
+        "lint": "npm run lint --workspaces",
+        "dev:react": "npm run dev --workspace=@will130785/react",
+        "dev:example:react": "npm run dev --workspace=react-example"
     },
     "devDependencies": {
         "@types/react": "^19.2.0",

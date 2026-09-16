@@ -1,25 +1,30 @@
 import type { ButtonHTMLAttributes } from 'react'
 
-export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary'
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary' | 'danger'
 }
 
 export const Button = ({
   variant = 'primary',
   children,
   ...props
-}: IButtonProps) => {
+}: ButtonProps) => {
+  let buttonClassList = ''
+  if (variant === 'primary') {
+    buttonClassList =
+      'p-2 rounded-md bg-amber-500 text-white cursor-pointer text-xs'
+  }
+  if (variant === 'secondary') {
+    buttonClassList =
+      'p-2 rounded-md bg-green-500 text-white cursor-pointer text-xs'
+  }
+  if (variant === 'danger') {
+    buttonClassList =
+      'p-2 rounded-md bg-red-500 text-white cursor-pointer text-xs'
+  }
+
   return (
-    <button
-      {...props}
-      data-variant={variant}
-      style={{
-        padding: '10px 16px',
-        borderRadius: 6,
-        border: '1px solid #ccc',
-        cursor: 'pointer',
-      }}
-    >
+    <button {...props} data-variant={variant} className={buttonClassList}>
       {children}
     </button>
   )
